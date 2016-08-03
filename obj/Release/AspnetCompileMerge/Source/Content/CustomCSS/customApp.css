@@ -1,0 +1,135 @@
+﻿body {
+}
+
+
+.bookcover_flexview {
+    display:flexbox;
+    flex-direction:row;
+    flex-wrap:wrap;
+}
+
+.bookcoverTemplate {
+    position:relative;
+    min-width:200px;
+    max-width:200px;
+    float:left;
+    margin-right:15px;
+    margin-bottom:20px;
+    border:solid 1px red;
+}
+
+
+.bookThumbnail {
+    position:relative;
+    max-width: 300px;
+    min-height:320px;
+    background-size:cover;
+}
+
+.bookTitle {
+    min-height:68px;
+    max-height:68px;
+    padding-top:4px;
+    padding-bottom:3px;
+    padding-left:6px;
+    padding-right:6px;
+}
+
+#lightBoxMask {
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+   background-color:#000;
+   opacity:0.8;
+   display:none;
+   z-index:100;
+}
+
+
+#lightBoxContainer {
+    position:fixed;
+    display:none;
+    top:15%;
+    left:0px;
+    width:100%;
+    background-color:transparent;
+    z-index:201;
+}
+
+#detailContainer {
+   position:relative;
+   background-color:#fff;
+   min-width:340px;
+   max-width:56%;
+   min-height:580px;
+   margin:auto;
+   border:solid 20px #333;
+   border-radius:5px;
+   box-shadow:rgba(25, 25, 25, 0.8) 5px 5px;
+}
+
+    #detailContainer .bookThumbnail {
+        min-height:540px;
+        min-width:340px;
+        max-width:360px;
+        padding-right:20px;
+        float:left;
+        background-size:cover;
+        border-right:solid 20px #9D121D;
+    }
+
+
+     #detailContainer .bookTitle{
+        height:auto;
+        min-height:300px;
+        min-width:45%;
+        max-width:360px;
+        margin-bottom:auto;
+        padding-top:40px;
+        padding-right:5%;
+        position:absolute;
+        right:0px;
+        font-weight:bold;
+        font-size:18px;
+        overflow-wrap:normal;
+        background-color:#fff;
+        opacity:0.8;
+        
+    }
+
+#detailContainer .closeButton {
+    position:absolute;
+    right:20px;
+    top:-18px;
+    width:30px;
+    height:30px;
+    border:solid 1px red;
+    z-index:202;
+    color:#fff;
+    background-color:red;
+    font-size:20px;
+    text-align:center;
+    border:solid 3px #B5B5B5;
+    border-radius:15px;
+    cursor:pointer;
+}
+
+.bookDetails {
+    padding-top:20px;
+    padding-bottom:20px;
+    font-size:14px;
+    background-color:#fff;
+    opacity:0.8;
+    padding-left:20px;
+}
+
+a.disabled {
+    color:gray;
+    cursor:none;
+}
+
+.pageLinkButton {
+    cursor:pointer;
+}

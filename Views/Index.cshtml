@@ -1,0 +1,44 @@
+﻿@{
+    PageData["title"] = "Ritchie's Angular Marvel project";
+}
+
+<p>Find a comic book that you are interested and click on it to see the details.</p>
+
+<div class="paginationContainer">
+    Pages:  <a id="prvPage" class="pageLinkButton" ng-click="PrevPage()">Prev</a>&nbsp; | &nbsp;<a id="nextPage" class="pageLinkButton" ng-click="NextPage()">Next</a>
+</div>
+
+<div class="bookcover_flexview">
+    <div data-ng-repeat="book in books" class="bookcoverTemplate" style="">
+        <div class="bookThumbnail" ng-click="getBookDetails(book.resourceURI)" style="background-image:url({{book.thumbnail.path}}.{{book.thumbnail.extension}})">
+            <!--<img ng-src="{{book.thumbnail.path}}.{{book.thumbnail.extension}}" />-->
+
+        </div>
+        <div class="bookTitle">
+
+            {{book.title}}
+        </div>
+    </div>
+    <div id="lightBoxContainer">
+        <div id="detailContainer">
+            <div class="glyphicon glyphicon-remove closeButton" ng-click="closeModal()">
+            </div>
+            <div class="bookThumbnail" style="background-image:url({{selectedBook.thumbnail.path}}.{{selectedBook.thumbnail.extension}})">
+            </div>
+            <div class="bookTitle">
+                {{selectedBook.title}}
+                <div class="bookDetails">
+                    {{selectedBook.format}}
+                    <br />
+                    Series: {{selectedBook.series.name}}
+                    <br />
+                    Collection Available: {{selectedBook.events.available}}
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+    <div id="lightBoxMask">  
+    </div>
+</div>
