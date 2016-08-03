@@ -2,6 +2,13 @@
 }
 
 
+.paginationContainer {
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+    padding-bottom:6px;
+}
+
 .bookcover_flexview {
     display:flexbox;
     flex-direction:row;
@@ -16,6 +23,11 @@
     margin-right:15px;
     margin-bottom:20px;
     border:solid 1px red;
+    cursor:pointer;
+}
+
+div.bookcoverTemplate:hover {
+    box-shadow: rgba(25, 25, 25, 0.7) 2px 2px ;
 }
 
 
@@ -128,6 +140,7 @@
 a.disabled {
     color:gray;
     cursor:none;
+    text-decoration:none;
 }
 
 .pageLinkButton {
